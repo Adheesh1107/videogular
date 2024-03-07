@@ -8,7 +8,7 @@ The repository contains an Angular 17 application that uses `ngx-videogular` to 
 
 # Steps to run
 
-1. Make sure you are using node version mentioned in the Prerequisites section. If you are using node version mananger (nvm), run `nvm use` to switch to the required node version
+1. Make sure you are using node version mentioned in the Prerequisites section. If you are using node version manager (nvm), run `nvm use` to switch to the required node version
 
 1. Run the following command to install all the dependant packages
 
@@ -22,7 +22,7 @@ npm i
 npm start
 ```
 
-## References link:
+## Reference links:
 
 https://videogular.github.io/ngx-videogular/docs/getting-started/
 
@@ -33,3 +33,5 @@ https://github.com/videogular/ngx-videogular/issues/54
 https://www.toptal.com/angular-js/angular-video-player-videogular
 
 https://material.angular.io/components/dialog/overview
+
+https://dev.to/rodrigokamada/creating-and-running-an-angular-application-in-a-docker-container-40mk
