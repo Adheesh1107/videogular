@@ -1,1 +1,29 @@
-# videogular
+# Videogular
+
+The repository contains an Angular 17 application that uses `ngx-videogular` to stream videos in webpages and displays a pop-up modal whenever the user plays the video
+
+## Prerequisites:
+
+- node version `18.16`
+
+# Steps to run
+
+1. Make sure you are using node version mentioned in the Prerequisites section. If you are using node version mananger (nvm), run `nvm use` to switch to the required node version
+
+1. Run the following command to install all the dependant packages
+
+```
+npm i
+```
+
+2. Run the following command to start the start
+
+```
+npm start
+```
+
+## References link:
+
+https://videogular.github.io/ngx-videogular/docs/getting-started/
+
+https://github.com/videogular/ngx-videogular/issues/54
