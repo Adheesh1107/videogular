@@ -4,6 +4,11 @@ import { PopUpModalComponent } from './components/pop-up-modal/pop-up-modal.comp
 import { VideoPlayerComponent } from './components/video-player/video-player.component';
 import { CommonModule } from '@angular/common';
 import { ModalStatusService } from './services/modal-status.service';
+import {
+  MatDialog,
+  MatDialogModule,
+  MatDialogRef,
+} from '@angular/material/dialog';
 
 @Component({
   selector: 'app-root',
@@ -13,17 +18,29 @@ import { ModalStatusService } from './services/modal-status.service';
     PopUpModalComponent,
     VideoPlayerComponent,
     CommonModule,
+    MatDialogModule,
   ],
   templateUrl: './app.component.html',
   styleUrl: './app.component.scss',
 })
 export class AppComponent implements OnInit {
   title = 'videogular';
-  showModal: boolean = false;
-  constructor(private modalStatusService: ModalStatusService) {}
+  dialogRef!: MatDialogRef<PopUpModalComponent>;
+  constructor(
+    private modalStatusService: ModalStatusService,
+    public dialog: MatDialog
+  ) {}
   ngOnInit(): void {
     this.modalStatusService.modalStatus.subscribe((status) => {
-      this.showModal = !this.showModal;
+      if (status) {
+        // Open the modal when modalStatus is true
+        this.dialogRef = this.dialog.open(PopUpModalComponent);
+
+        this.dialogRef.afterClosed().subscribe(() => {
+          // Emit false value when the modal is closed
+          this.modalStatusService.modalStatus.next(false);
+        });
+      }
     });
   }
 }

@@ -26,4 +26,10 @@ npm start
 
 https://videogular.github.io/ngx-videogular/docs/getting-started/
 
+https://videogular.github.io/videogular2/docs/modules/core/services/vg-api/
+
 https://github.com/videogular/ngx-videogular/issues/54
+
+https://www.toptal.com/angular-js/angular-video-player-videogular
+
+https://material.angular.io/components/dialog/overview
